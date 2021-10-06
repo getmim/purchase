@@ -54,14 +54,6 @@ return [
                 'attrs' => [],
                 'index' => 6000
             ],
-            'courier_fee' => [
-                'type' => 'DOUBLE',
-                'length' => '13,2',
-                'attrs' => [
-                    'unsigned' => true
-                ],
-                'index' => 7000
-            ],
             'courier_receipt' => [
                 'comment' => 'Courier RESI number',
                 'type' => 'VARCHAR',
@@ -69,13 +61,13 @@ return [
                 'attrs' => [
                     'unique' => true
                 ],
-                'index' => 8000
+                'index' => 7000
             ],
             'destination' => [
                 'comment' => '{province, city, district, subdistrict, street, zipcode, recipient, phone}',
                 'type' => 'TEXT',
                 'attrs' => [],
-                'index' => 9000
+                'index' => 8000
             ],
             'price' => [
                 'type' => 'DOUBLE',
@@ -86,6 +78,14 @@ return [
                 ],
                 'index' => 9000
             ],
+            'courier_fee' => [
+                'type' => 'DOUBLE',
+                'length' => '13,2',
+                'attrs' => [
+                    'unsigned' => true
+                ],
+                'index' => 10000
+            ],
             'total' => [
                 'type' => 'DOUBLE',
                 'length' => '13,2',
@@ -93,7 +93,7 @@ return [
                     'unsigned' => true,
                     'null' => false
                 ],
-                'index' => 10000
+                'index' => 11000
             ],
             'updated' => [
                 'type' => 'TIMESTAMP',
@@ -101,14 +101,14 @@ return [
                     'default' => 'CURRENT_TIMESTAMP',
                     'update' => 'CURRENT_TIMESTAMP'
                 ],
-                'index' => 11000
+                'index' => 12000
             ],
             'created' => [
                 'type' => 'TIMESTAMP',
                 'attrs' => [
                     'default' => 'CURRENT_TIMESTAMP'
                 ],
-                'index' => 12000
+                'index' => 13000
             ]
         ]
     ],
@@ -185,7 +185,26 @@ return [
                 ],
                 'index' => 3000
             ],
+            'fee' => [
+                'type' => 'DOUBLE',
+                'length' => '13,2',
+                'attrs' => [
+                    'unsigned' => true,
+                    'null' => false
+                ],
+                'index' => 4000
+            ],
+            'total' => [
+                'type' => 'DOUBLE',
+                'length' => '13,2',
+                'attrs' => [
+                    'unsigned' => true,
+                    'null' => false
+                ],
+                'index' => 5000
+            ],
             'method' => [
+                'comment' => '{type, bank:{name,code,account:{name,number}}, meta}',
                 'type' => 'TEXT',
                 'attrs' => [],
                 'index' => 4000

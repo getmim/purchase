@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'purchase',
-    '__version' => '0.0.1',
+    '__version' => '0.1.0',
     '__git' => 'git@github.com:getmim/purchase.git',
     '__license' => 'MIT',
     '__author' => [
@@ -181,6 +181,14 @@ return [
                 'status' => [
                     'type' => 'enum',
                     'enum' => 'purchase-payment.status'
+                ],
+                'fee' => [
+                    'type' => 'number',
+                    'decimal' => 2
+                ],
+                'total' => [
+                    'type' => 'number',
+                    'decimal' => 2
                 ],
                 'method' => [
                     'type' => 'json'
