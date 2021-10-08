@@ -20,6 +20,15 @@ return [
                 ],
                 'index' => 2000
             ],
+            'invoice' => [
+                'type' => 'VARCHAR',
+                'length' => 100,
+                'attrs' => [
+                    'null' => false,
+                    'unique' => true
+                ],
+                'index' => 3000
+            ],
             'status' => [
                 'comment' => '0 Canceled, 1 Draft, 2 Checkout, 3 Paid, 4 Delivering, 5 Delivered',
                 'type' => 'TINYINT',
@@ -28,7 +37,7 @@ return [
                     'null' => false,
                     'default' => 1
                 ],
-                'index' => 3000
+                'index' => 4000
             ],
             'items' => [
                 'comment' => 'Total product item',
@@ -37,7 +46,7 @@ return [
                     'unsigned' => true,
                     'null' => false
                 ],
-                'index' => 4000
+                'index' => 5000
             ],
             'quantity' => [
                 'comment' => 'Total product quantity',
@@ -46,13 +55,13 @@ return [
                     'unsigned' => true,
                     'null' => false
                 ],
-                'index' => 5000
+                'index' => 6000
             ],
             'courier' => [
                 'comment' => '{provider, package, info}',
                 'type' => 'TEXT',
                 'attrs' => [],
-                'index' => 6000
+                'index' => 7000
             ],
             'courier_receipt' => [
                 'comment' => 'Courier RESI number',
@@ -61,13 +70,13 @@ return [
                 'attrs' => [
                     'unique' => true
                 ],
-                'index' => 7000
+                'index' => 8000
             ],
             'destination' => [
                 'comment' => '{province, city, district, subdistrict, street, zipcode, recipient, phone}',
                 'type' => 'TEXT',
                 'attrs' => [],
-                'index' => 8000
+                'index' => 9000
             ],
             'price' => [
                 'type' => 'DOUBLE',
@@ -76,7 +85,7 @@ return [
                     'unsigned' => true,
                     'null' => false
                 ],
-                'index' => 9000
+                'index' => 10000
             ],
             'courier_fee' => [
                 'type' => 'DOUBLE',
@@ -84,7 +93,7 @@ return [
                 'attrs' => [
                     'unsigned' => true
                 ],
-                'index' => 10000
+                'index' => 11000
             ],
             'total' => [
                 'type' => 'DOUBLE',
@@ -93,7 +102,7 @@ return [
                     'unsigned' => true,
                     'null' => false
                 ],
-                'index' => 11000
+                'index' => 12000
             ],
             'updated' => [
                 'type' => 'TIMESTAMP',
@@ -101,14 +110,14 @@ return [
                     'default' => 'CURRENT_TIMESTAMP',
                     'update' => 'CURRENT_TIMESTAMP'
                 ],
-                'index' => 12000
+                'index' => 13000
             ],
             'created' => [
                 'type' => 'TIMESTAMP',
                 'attrs' => [
                     'default' => 'CURRENT_TIMESTAMP'
                 ],
-                'index' => 13000
+                'index' => 14000
             ]
         ]
     ],

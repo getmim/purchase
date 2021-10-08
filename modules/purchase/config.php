@@ -65,6 +65,9 @@ return [
                 'user' => [
                     'type' => 'user'
                 ],
+                'invoice' => [
+                    'type' => 'text'
+                ],
                 'status' => [
                     'type' => 'enum',
                     'enum' => 'purchase.status'
