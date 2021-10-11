@@ -79,8 +79,7 @@ return [
                     'type' => 'number'
                 ],
                 'courier' => [
-                    'type' => 'json',
-                    'format' => 'purchase.courier'
+                    'type' => 'json'
                 ],
                 'courier_fee' => [
                     'type' => 'number',
@@ -90,8 +89,7 @@ return [
                     'type' => 'text'
                 ],
                 'destination' => [
-                    'type' => 'json',
-                    'format' => 'purchase.destination'
+                    'type' => 'json'
                 ],
                 'price' => [
                     'type' => 'number',
@@ -106,43 +104,6 @@ return [
                 ],
                 'created' => [
                     'type' => 'date'
-                ]
-            ],
-            'purchase.courier' => [
-                'provider' => [
-                    'type' => 'text'
-                ],
-                'package' => [
-                    'type' => 'text'
-                ],
-                'info' => [
-                    'type' => 'text'
-                ]
-            ],
-            'purchase.destination' => [
-                'province' => [
-                    'type' => 'text'
-                ],
-                'city' => [
-                    'type' => 'text'
-                ],
-                'district' => [
-                    'type' => 'text'
-                ],
-                'subdistrict' => [
-                    'type' => 'text'
-                ],
-                'street' => [
-                    'type' => 'text'
-                ],
-                'zipcode' => [
-                    'type' => 'text'
-                ],
-                'recipient' => [
-                    'type' => 'text'
-                ],
-                'phone' => [
-                    'type' => 'text'
                 ]
             ],
             'purchase-delivery' => [
