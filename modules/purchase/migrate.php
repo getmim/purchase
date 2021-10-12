@@ -30,7 +30,7 @@ return [
                 'index' => 3000
             ],
             'status' => [
-                'comment' => '0 Canceled, 1 Draft, 2 Checkout, 3 Paid, 4 Delivering, 5 Delivered',
+                'comment' => '0 Canceled, 1 Draft, 2 Checkout, 3 Paid, 4 Delivering, 5 Delivered, 6 Returning, 7 Returned',
                 'type' => 'TINYINT',
                 'attrs' => [
                     'unsigned' => true,

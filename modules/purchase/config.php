@@ -47,7 +47,9 @@ return [
                 'Checkout',
                 'Paid',
                 'Delivering',
-                'Delivered'
+                'Delivered',
+                'Returning',
+                'Returned'
             ],
             'purchase-payment.status' => [
                 'Canceled',
