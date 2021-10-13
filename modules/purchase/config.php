@@ -121,8 +121,8 @@ return [
                     ],
                     'format' => 'purchase'
                 ],
-                'info' => [
-                    'type' => 'text'
+                'data' => [
+                    'type' => 'json'
                 ],
                 'updated' => [
                     'type' => 'date'

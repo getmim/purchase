@@ -140,9 +140,8 @@ return [
                 ],
                 'index' => 2000
             ],
-            'info' => [
-                'type' => 'VARCHAR',
-                'length' => 200,
+            'data' => [
+                'type' => 'TEXT',
                 'attrs' => [
                     'null' => false
                 ],
