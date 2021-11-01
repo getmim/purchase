@@ -72,7 +72,8 @@ return [
                 ],
                 'status' => [
                     'type' => 'enum',
-                    'enum' => 'purchase.status'
+                    'enum' => 'purchase.status',
+                    'vtype' => 'int'
                 ],
                 'items' => [
                     'type' => 'number'

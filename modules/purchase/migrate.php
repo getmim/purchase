@@ -24,7 +24,6 @@ return [
                 'type' => 'VARCHAR',
                 'length' => 100,
                 'attrs' => [
-                    'null' => false,
                     'unique' => true
                 ],
                 'index' => 3000
