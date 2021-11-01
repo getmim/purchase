@@ -35,27 +35,18 @@ return [
             'Purchase\\Model' => [
                 'type' => 'file',
                 'base' => 'modules/purchase/model'
+            ],
+            'Purchase\\Library' => [
+                'type' => 'file',
+                'base' => 'modules/purchase/library'
             ]
         ],
         'files' => []
     ],
     'libEnum' => [
         'enums' => [
-            'purchase.status' => [
-                'Canceled',
-                'Draft',
-                'Checkout',
-                'Paid',
-                'Delivering',
-                'Delivered',
-                'Returning',
-                'Returned'
-            ],
-            'purchase-payment.status' => [
-                'Canceled',
-                'Pending',
-                'Paid'
-            ]
+            'purchase.status' => ['Canceled','Draft','Checkout','Paid','Delivering','Delivered','Returning','Returned'],
+            'purchase-payment.status' => ['Canceled','Pending','Paid']
         ]
     ],
     'libFormatter' => [
@@ -207,6 +198,13 @@ return [
                     'type' => 'date'
                 ]
             ]
+        ]
+    ],
+    'purchase' => [
+        'invoice' => [
+            'generator' => 'Purchase\\Library\\Invoice',
+            'prefix' => 'INV-',
+            'length' => 8
         ]
     ]
 ];
