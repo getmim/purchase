@@ -10,7 +10,7 @@ namespace Purchase\Library;
 
 class Invoice
 {
-    public function generate(object $purchase): string
+    public static function generate(object $purchase): string
     {
         $id = $purchase->id;
         $prefix = \Mim::$app->config->purchase->invoice->prefix ?? 'INV-';
