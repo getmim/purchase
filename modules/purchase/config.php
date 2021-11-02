@@ -45,8 +45,7 @@ return [
     ],
     'libEnum' => [
         'enums' => [
-            'purchase.status' => ['Canceled','Draft','Checkout','Paid','Delivering','Delivered','Returning','Returned'],
-            'purchase-payment.status' => ['Canceled','Pending','Paid']
+            'purchase.status' => ['Canceled','Draft','Checkout','Paid','Delivering','Delivered','Returning','Returned']
         ]
     ],
     'libFormatter' => [
@@ -79,41 +78,6 @@ return [
                 'total' => [
                     'type' => 'number',
                     'decimal' => 2
-                ],
-                'updated' => [
-                    'type' => 'date'
-                ],
-                'created' => [
-                    'type' => 'date'
-                ]
-            ],
-            'purchase-payment' => [
-                'id' => [
-                    'type' => 'number'
-                ],
-                'purchase' => [
-                    'type' => 'object',
-                    'model' => [
-                        'name' => 'Purchase\\Model\\Purchase',
-                        'field' => 'id',
-                        'type' => 'number'
-                    ],
-                    'format' => 'purchase'
-                ],
-                'status' => [
-                    'type' => 'enum',
-                    'enum' => 'purchase-payment.status'
-                ],
-                'fee' => [
-                    'type' => 'number',
-                    'decimal' => 2
-                ],
-                'total' => [
-                    'type' => 'number',
-                    'decimal' => 2
-                ],
-                'method' => [
-                    'type' => 'json'
                 ],
                 'updated' => [
                     'type' => 'date'
