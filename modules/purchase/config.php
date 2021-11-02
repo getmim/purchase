@@ -72,19 +72,6 @@ return [
                 'quantity' => [
                     'type' => 'number'
                 ],
-                'courier' => [
-                    'type' => 'json'
-                ],
-                'courier_fee' => [
-                    'type' => 'number',
-                    'decimal' => 2
-                ],
-                'courier_receipt' => [
-                    'type' => 'text'
-                ],
-                'destination' => [
-                    'type' => 'json'
-                ],
                 'price' => [
                     'type' => 'number',
                     'decimal' => 2
@@ -92,29 +79,6 @@ return [
                 'total' => [
                     'type' => 'number',
                     'decimal' => 2
-                ],
-                'updated' => [
-                    'type' => 'date'
-                ],
-                'created' => [
-                    'type' => 'date'
-                ]
-            ],
-            'purchase-delivery' => [
-                'id' => [
-                    'type' => 'number'
-                ],
-                'purchase' => [
-                    'type' => 'object',
-                    'model' => [
-                        'name' => 'Purchase\\Model\\Purchase',
-                        'field' => 'id',
-                        'type' => 'number'
-                    ],
-                    'format' => 'purchase'
-                ],
-                'data' => [
-                    'type' => 'json'
                 ],
                 'updated' => [
                     'type' => 'date'
