@@ -29,12 +29,11 @@ return [
                 'index' => 3000
             ],
             'status' => [
-                'comment' => '0 Canceled, 1 Draft, 2 Checkout, 3 Paid, 4 Delivering, 5 Delivered, 6 Returning, 7 Returned',
                 'type' => 'TINYINT',
                 'attrs' => [
                     'unsigned' => true,
                     'null' => false,
-                    'default' => 1
+                    'default' => 10
                 ],
                 'index' => 4000
             ],
@@ -74,20 +73,33 @@ return [
                 ],
                 'index' => 12000
             ],
+            'reason' => [
+                'type' => 'VARCHAR',
+                'length' => 100,
+                'attrs' => [],
+                'index' => 13000
+            ],
+            'expires' => [
+                'type' => 'DATETIME',
+                'attrs' => [
+                    'null' => true
+                ],
+                'index' => 14000
+            ],
             'updated' => [
                 'type' => 'TIMESTAMP',
                 'attrs' => [
                     'default' => 'CURRENT_TIMESTAMP',
                     'update' => 'CURRENT_TIMESTAMP'
                 ],
-                'index' => 13000
+                'index' => 15000
             ],
             'created' => [
                 'type' => 'TIMESTAMP',
                 'attrs' => [
                     'default' => 'CURRENT_TIMESTAMP'
                 ],
-                'index' => 14000
+                'index' => 16000
             ]
         ]
     ],

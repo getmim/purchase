@@ -20,7 +20,10 @@ return [
             'prefix' => 'INV-',
 
             // panjang nya numeric invoice number
-            'length' => 10
+            'length' => 10,
+
+            // waiting payment time in second
+            'payment_expiration' => 7200 // 2 hours
         ]
     ]
 ];

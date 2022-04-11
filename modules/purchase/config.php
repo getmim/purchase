@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'purchase',
-    '__version' => '0.1.0',
+    '__version' => '0.2.0',
     '__git' => 'git@github.com:getmim/purchase.git',
     '__license' => 'MIT',
     '__author' => [
@@ -45,7 +45,18 @@ return [
     ],
     'libEnum' => [
         'enums' => [
-            'purchase.status' => ['Canceled','Draft','Checkout','Paid','Delivering','Delivered','Returning','Returned']
+            'purchase.status' => [
+                0  => 'Canceled',
+                10 => 'Draft',
+                20 => 'Expired',
+                30 => 'Checkout',
+                40 => 'Paid',
+                50 => 'Approved',
+                60 => 'Delivering',
+                70 => 'Delivered',
+                80 => 'Returning',
+                90 => 'Returned'
+            ]
         ]
     ],
     'libFormatter' => [
@@ -78,6 +89,9 @@ return [
                 'total' => [
                     'type' => 'number',
                     'decimal' => 2
+                ],
+                'reason' => [
+                    'type' => 'text'
                 ],
                 'updated' => [
                     'type' => 'date'
